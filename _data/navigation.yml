@@ -1,14 +1,12 @@
 primary:
+  - text: Choose a madlib
+    links:
+      - text: Tasty
+        href: /pages/tasty
+      - text: What is this
+        href: /pages/what-is-this
   - text: Documentation
     href: /docs/
-  - text: Navigation section
-    links:
-      - text: Demo link A
-        href: /
-      - text: Demo link B
-        href: /
-      - text: Demo link C
-        href: /
 
 footer:
   - text: Documentation

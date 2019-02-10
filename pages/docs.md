@@ -3,35 +3,16 @@ title: Reading room
 permalink: /docs/
 
 layout: page
-sidenav: docs
 
-subnav:
-  - text: Section one
-    href: '#section-one'
-  - text: Section two
-    href: '#section-two'
 ---
 
-# Section one
+# About FOIAlibs
 
-This is some content.
+This is an side project that makes FOIA requests into madlibs. It is not owned or operated by the government.
 
-## Section two
+Thanks to 18F and the USWDS and Federalist teams for the <a href="https://github.com/18F/uswds-jekyll#customization">jekyll theme</a>.
 
-This is some more content.
+## Contributing
 
-### Section three
+PRs are welcome! If PRs are not in your wheelhouse, you can add good docs as issues.
 
-This is some more content.
-
-#### Section four
-
-This is some more content.
-
-##### Section five
-
-This is some more content.
-
-###### Section six
-
-This is some more content.

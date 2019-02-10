@@ -1,14 +1,34 @@
 ---
 layout: page
 ---
+<style type="text/css">
+    #FOIASuprise {position: relative;}
+    {% for r in page.redactions %}
+        #redaction_{{ r.redaction_id }} {
+            position: absolute;
+            top: {{ r.px_top }}px;
+            left: {{ r.px_left }}px;
+            color: {{ r.text_color }};
+            /*font: 15px/35px , Courier, Serif;*/
+            background: rgb(0, 0, 0); /* fallback color */
+            background: {{ r.background_color }};
+            font-size: {{ r.font_size }}px;
+            font: Courier, Serif;*/
+            padding:5px;
+            padding-right:10px;
+            padding-left:10px;
+        }
+    {% endfor %}
+</style>
 
+<section class="usa-grid">
 <h1>{{ page.title }} mad libs</h1>
 <div id="main">
 
   <div id="FOIASuprise">
     <img src="{{ page.image_url }}" alt="{{ page.description }}">
     {% for r in page.redactions %}
-        <span id="{{ r.redaction_id }}" class='redaction'></span>
+        <span id="redaction_{{ r.redaction_id }}" class='redaction'>{{  }}</span>
         <!-- EXAMPLE: <h2 id="food1" class="redaction"></h2> -->
         <!-- <p>FOIA via <a href="{{ page.foia_source_url }}">{{ page.foia_source }}</a></p> -->
     {% endfor %}
@@ -21,8 +41,8 @@ layout: page
 
   <button type="button" onclick="validateForm()">Submit</button>
   </form>
-
 </div>
+</section>
 
 <script>
     var x = document.getElementById("FOIASuprise");
@@ -31,7 +51,7 @@ layout: page
     function validateForm() {
         {% for r in page.redactions %}
             var {{ r.redaction_id }} = document.forms["FOIAForm"]["{{ r.redaction_id }}"].value;
-            document.getElementById("{{ r.redaction_id }}").innerHTML = {{ r.redaction_id }};
+            document.getElementById("redaction_{{ r.redaction_id }}").innerHTML = {{ r.redaction_id }};
         {% endfor %}
 
         x.style.display = "block"
