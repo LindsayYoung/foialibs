@@ -1,0 +1,41 @@
+---
+layout: page
+---
+
+<h1>{{ page.title }} mad libs</h1>
+<div id="main">
+
+  <div id="FOIASuprise">
+    <img src="{{ page.image_url }}" alt="{{ page.description }}">
+    {% for r in page.redactions %}
+        <span id="{{ r.redaction_id }}" class='redaction'></span>
+        <!-- EXAMPLE: <h2 id="food1" class="redaction"></h2> -->
+        <!-- <p>FOIA via <a href="{{ page.foia_source_url }}">{{ page.foia_source }}</a></p> -->
+    {% endfor %}
+  </div>
+
+  <form name="FOIAForm" onsubmit="validateForm()" >
+      {% for r in page.redactions %}
+          {{ r.clue }}: <input id="{{ r.redaction_id }}">
+      {% endfor %}
+
+  <button type="button" onclick="validateForm()">Submit</button>
+  </form>
+
+</div>
+
+<script>
+    var x = document.getElementById("FOIASuprise");
+    x.style.display = "none"
+
+    function validateForm() {
+        {% for r in page.redactions %}
+            var {{ r.redaction_id }} = document.forms["FOIAForm"]["{{ r.redaction_id }}"].value;
+            document.getElementById("{{ r.redaction_id }}").innerHTML = {{ r.redaction_id }};
+        {% endfor %}
+
+        x.style.display = "block"
+    }
+</script>
+
+
