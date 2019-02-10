@@ -1,5 +1,5 @@
 ---
-title: Documentation
+title: Reading room
 permalink: /docs/
 
 layout: page
