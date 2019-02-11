@@ -1,12 +1,10 @@
-# U.S. Web Design Standards template for Federalist
-This is a Federalist site template that incorporates the [U.S. Web Design
-Standards] [Jekyll theme].
 
-View the [theme documentation] for more info on available [layouts] and
-[customization] options.
+# About FOIAlibs
 
-[U.S. Web Design Standards]: https://standards.usa.gov
-[Jekyll theme]: https://jekyllrb.com/docs/themes/
-[theme documentation]: https://github.com/18F/jekyll-uswds/#readme
-[layouts]: https://github.com/18F/jekyll-uswds/#layouts
-[customization]: https://github.com/18F/jekyll-uswds/#customization
+This is an side project that makes FOIA requests into madlibs. It is not owned or operated by the government.
+
+Thanks to 18F and the USWDS and Federalist teams for the <a href="https://github.com/18F/uswds-jekyll#customization">jekyll theme</a>.
+
+## Contributing
+
+PRs are welcome! If PRs are not in your wheelhouse, you can add good docs as issues.
