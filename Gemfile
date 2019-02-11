@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 ruby "2.6.1"
 
+gem 'github-pages'
 gem 'uswds-jekyll', :git => 'https://github.com/18F/uswds-jekyll.git'
 
 group :jekyll_plugins do
